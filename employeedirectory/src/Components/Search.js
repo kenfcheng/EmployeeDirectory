@@ -5,6 +5,8 @@ import { Context } from "./Components/Context.js";
 Search = () => {
   const [search, setSearch] = useState("");
   const { employees, employeesDisplayed } = useContext(Context);
+  const { position, positionDisplayed } = useContext(Context);
+  const { department, deptDisplayed } = useContext(Context);
 
   searchUpdate = ({ target }) => {
     const inputTerm = target.value;
