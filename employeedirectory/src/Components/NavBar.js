@@ -7,7 +7,7 @@ const NavBar = () => {
     <div className="navBar">
       <div className="logo bold">Employee Directory</div>
       <div className="description">
-        <div className="searchEmployee">Search Employee</div>
+        <div className="searchEmployee bold">Search Employee</div>
         <Search />
       </div>
     </div>
