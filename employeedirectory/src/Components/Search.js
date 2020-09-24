@@ -16,20 +16,12 @@ Search = () => {
       return employee.name.first.toLowerCase().indexOf(search.toLowerCase);
     });
     employeesDisplayed([...filterResult]);
-  };
 
-  searchUpdate = ({ target }) => {
-    const inputTerm = target.value;
-    setSearch(inputTerm);
     const result = position.filter(function (position) {
       return position.name.toLowerCase().indexOf(search.toLowerCase);
     });
     positionDisplayed([...filterResult]);
-  };
 
-  searchUpdate = ({ target }) => {
-    const inputTerm = target.value;
-    setSearch(inputTerm);
     const result = position.filter(function (department) {
       return department.name.toLowerCase().indexOf(search.toLowerCase);
     });
