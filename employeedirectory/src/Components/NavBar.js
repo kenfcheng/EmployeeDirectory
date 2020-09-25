@@ -1,6 +1,6 @@
 import React from "react";
 import Search from "./Search";
-import NavBar from "./Styles/NavBar";
+// import NavBar from "./Styles/NavBar";
 
 const NavBar = () => {
   return (
