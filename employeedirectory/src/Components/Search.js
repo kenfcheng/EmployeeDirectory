@@ -3,33 +3,35 @@ import { Context } from "./Components/Context.js";
 
 // Search input
 Search = () => {
-  const [search, setSearch] = useState("");
-  const { employees, employeesDisplayed } = useContext(Context);
-  const { position, positionDisplayed } = useContext(Context);
-  const { department, deptDisplayed } = useContext(Context);
+  // const [search, setSearch] = useState("");
+  // const { employees, displayEmployees } = useContext(Context);
+  // const { email, displayEmail } = useContext(Context);
+  // const { username, displayUsername } = useContext(Context);
 
-  searchUpdate = ({ target }) => {
-    const inputTerm = target.value;
-    setSearch(inputTerm);
-    // This will live filter text as employee name is entered.
-    const result = employees.filter(function (employees) {
-      return employees.name.first.toLowerCase().indexOf(search.toLowerCase);
-    });
-    employeesDisplayed([...filterResult]);
+  // searchUpdate = ({ target }) => {
+  //   const inputTerm = target.value;
+  //   setSearch(inputTerm);
+  //   // This will live filter text as employee name is entered.
+  //   const result = employees.filter(function (employees) {
+  //     return employees.name.first.toLowerCase().indexOf(search.toLowerCase);
+  //   });
+  //   displayEmployees([...filterResult]);
 
-    const result = position.filter(function (position) {
-      return position.name.toLowerCase().indexOf(search.toLowerCase);
-    });
-    positionDisplayed([...filterResult]);
+  //   const result = email.filter(function (email) {
+  //     return email.toLowerCase().indexOf(search.toLowerCase);
+  //   });
+  //   displayEmail([...filterResult]);
 
-    const result = department.filter(function (department) {
-      return department.name.toLowerCase().indexOf(search.toLowerCase);
-    });
-    deptDisplayed([...filterResult]);
-  };
+  //   const result = username.filter(function (username) {
+  //     return username.toLowerCase().indexOf(search.toLowerCase);
+  //   });
+  //   displayUsername([...filterResult]);
+  // };
 
   return;
-  <input type="text" onChange={updateSearch} value={search}></input>;
+  <div>
+    <input type="text" onChange={updateSearch} value={search}></input>;
+  </div>;
 };
 [];
 
