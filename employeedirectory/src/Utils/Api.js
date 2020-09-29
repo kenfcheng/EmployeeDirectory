@@ -1,22 +1,14 @@
-import React from "react";
+import axios from "axios";
 
-const Api = () => {
-  fetch("https://randomuser.me/api/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: "First Name",
-      gender: "Gender",
-      username: "Username",
-    }),
-  })
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => console.log(data))
-    .catch((error) => console.log("ERROR"));
+export default {
+  fetchEmployees: function () {
+    return axios.get("https://randomuser.me/api/").then((res) => {
+      const employees = res.data;
+      return {
+        Name: name.first,
+        Email: Email,
+        Username: Username,
+      };
+    });
+  },
 };
-
-export default Api;
