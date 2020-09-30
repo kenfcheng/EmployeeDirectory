@@ -7,7 +7,7 @@ export default {
       return {
         Name: name.first,
         Email: Email,
-        Username: Username,
+        Username: user.name,
       };
     });
   },
