@@ -1,38 +1,35 @@
 import React, { useState, useContext } from "react";
+import { userContext } from "../Utils/userContext";
 
-const Search = () => {
-  // const [search, setSearch] = useState("");
-  // const { employees, displayEmployees } = useContext(employeeResult);
-  // const { email, displayEmail } = useContext(createContext);
-  // const { username, displayUsername } = useContext(createContext);
+function Search() {
+  const [search, setSearch] = useState("");
+  const { userName, setUserNameDisplay } = useContext(userContext);
+  const { email, setEmailDisplay } = useContext(userContext);
+  const { name, setNameDisplay } = useContext(userContext);
 
-  // searchUpdate = ({ target }) => {
-  //   const inputTerm = target.value;
-  //   setSearch(inputTerm); // This will live filter text as employee name is entered.
-  //   const employeeResult = employees.filter(function (employees) {
-  //     return employees.name.first.toLowerCase().indexOf(search.toLowerCase);
-  //   });
-  //   displayEmployees([...filterResult]);
+  function updateSearch({ target }) {
+    // Filters user's search by "Name" "Email" "UserName"
+    const searchName = target.value;
+    setSearch(searchQuery);
+    const filterName = name.filter(function (name) {
+      return name.first.toLowerCase().indexOf(searchName.toLowerCase());
+    });
+    setNameDisplay([...filterName]);
 
-  //   const emailResult = email.filter(function (email) {
-  //     return email.toLowerCase().indexOf(search.toLowerCase);
-  //   });
-  //   displayEmail([...filterResult]);
+    const searchEmail = target.value;
+    const filterEmail = email.filter(function (email) {
+      return email.toLowerCase().indexOf(searchEmail.toLowerCase());
+    });
+    setEmailDisplay([...filterEmail]);
 
-  //   const usernameResult = username.filter(function (username) {
-  //     return username.toLowerCase().indexOf(search.toLowerCase);
-  //   });
-  //   displayUsername([...filterResult]);
-  // };
-  return;
-  // <div>
-  //   <form className="Search">
-  //     <input type="text" placeholder="Search.." name="search" />
-  //     <button type="submit">
-  //       <i className="fa fa-search"></i>
-  //     </button>
-  //   </form>
-  // </div>;
-};
+    const searchUserName = target.value;
+    const filterUserName = userName.filter(function (userName) {
+      return userName.toLowerCase().indexOf(searchUserName.toLowerCase());
+    });
+    setUserNameDisplay([...filterUserName]);
+  }
+
+  return <input type="text" onChange={updateSearch} value={search}></input>;
+}
 
 export default Search;

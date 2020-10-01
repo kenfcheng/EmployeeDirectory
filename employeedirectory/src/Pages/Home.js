@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import API from "../Utils/Api";
 import Container from "../Components/Container";
+import userContext from "../Utils/userContext";
 
-const Index = () => {
-  return <div></div>;
-};
+const Home = () => {};
 
-export default Index;
+export default Home;

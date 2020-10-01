@@ -1,4 +1,4 @@
-.navBar {
+.BarStyle {
   background-color: aquamarine;
   color: black;
   display: flex;
@@ -15,7 +15,7 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.searchEmployee {
+.searchUser {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
