@@ -1,35 +1,21 @@
-import React from "react";
-// import API from "./Utils/Api";
-// import Container from "./Components/Container";
-import Footer from "./Components/Footer";
+import React, { Component } from "react";
+import Container from "./Components/Container";
+import { AppHeader } from "./AppStyle.css";
+import Header from "./Components/Header";
 
-import NavBar from "./Components/NavBar";
-import Wrapper from "./Components/Wrapper";
-
-// import AppStyle from "./Styles/AppStyle";
-
-const App = () => {
-  // const [name, setName] = useState([]);
-  // const [email, setEmail] = useState([]);
-  // const [userName, setUserName] = useState([]);
-
-  // useEffect(() => {
-  //   loadUser();
-  // }, []);
-
-  // const loadUser = () => {
-  //   API.getUserList;
-  // };
-
-  return (
-    <div>
-      <Wrapper />
-      <NavBar />
-
-      <Footer />
-      <Wrapper />
-    </div>
-  );
-};
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <div className={AppHeader}>
+          <Header />
+        </div>
+        <div className="jumbotron">
+          <Container />
+        </div>
+      </div>
+    );
+  }
+}
 
 export default App;

@@ -1,9 +1,15 @@
 import React from "react";
+import Table from "./Table";
 
-function Container(props) {
-  return (
-    <div className={`container${props.fluid ? "-fluid" : ""}`} {...props} />
-  );
+class Container extends React.Component {
+  render() {
+    return (
+      <div className="Jumbotron">
+        <h2>Employees</h2>
+        <Table />
+      </div>
+    );
+  }
 }
 
 export default Container;
